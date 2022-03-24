@@ -1,0 +1,24 @@
+{:paths ["src" "resources"]
+
+ :deps {org.clojure/clojure {:mvn/version "1.11.0"}
+
+        ;; De-facto Clojure HTTP abstraction
+        ring/ring                           {:mvn/version "1.9.5"}
+
+        ;; HTML rendering
+        hiccup/hiccup                       {:mvn/version "1.0.5"}
+
+        ;; HTTP Routing
+        metosin/reitit                      {:mvn/version "0.5.16"}
+
+        ;; Schemas (parmeter validation / coercion)
+        metosin/malli                       {:mvn/version "0.8.4"}
+
+        ;; Async for SSE (server sent events)
+        org.clojure/core.async              {:mvn/version "1.5.648"}
+
+        ;; Debugging helper
+        philoskim/debux                     {:mvn/version "0.8.2"}}
+
+ :aliases {:nrepl       {:main-opts  ["-m" "nrepl.cmdline" "-b" "0.0.0.0" "-p" "21155"]
+                         :extra-deps {nrepl/nrepl {:mvn/version "0.9.0"}}}}}
